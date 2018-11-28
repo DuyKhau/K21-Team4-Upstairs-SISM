@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using K21_Team4_Upstairs_SISM.Models;
+using IdentificationManagement.Models;
 
-namespace K21_Team4_Upstairs_SISM
+namespace IdentificationManagement
 {
     public partial class Startup
     {
@@ -46,9 +46,9 @@ namespace K21_Team4_Upstairs_SISM
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
 			// Uncomment the following lines to enable logging in with third party login providers
-			//app.UseMicrosoftAccountAuthentication(
-			//    clientId: "",
-			//    clientSecret: "");
+			app.UseMicrosoftAccountAuthentication(
+				clientId: "ea2300f8-22a5-4f18-86d4-78316fb2c5e9",
+				clientSecret: "bscdgBMLJW11?![vcST867-");
 
 			//app.UseTwitterAuthentication(
 			//   consumerKey: "",
@@ -63,7 +63,6 @@ namespace K21_Team4_Upstairs_SISM
 			//    ClientId = "",
 			//    ClientSecret = ""
 			//});
-			app.UseVanLangAuthentication("https://localhost:44396/");
-        }
+		}
     }
 }
