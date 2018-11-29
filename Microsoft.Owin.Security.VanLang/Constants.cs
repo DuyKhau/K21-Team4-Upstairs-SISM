@@ -5,7 +5,7 @@ namespace Microsoft.Owin.Security.VanLang
 {
 	internal static class Constants
 	{
-		public const string DefaultAuthenticationType = "VanLang";
+		public const string DefaultAuthenticationType = "Văn Lang";
 		public const string DefaultAuthenticationName = "Văn Lang";
 		internal const string AuthorizationEndpoint = "/Account/LoginVL";
 		internal const string UserInformationEndpoint = "/Account/GetInfo";

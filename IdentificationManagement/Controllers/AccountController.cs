@@ -30,7 +30,10 @@ namespace IdentificationManagement.Controllers
 			if (state != null)
 				Hashtable[state] = redirect_uri;
 			ViewBag.ReturnUrl = state;
-			return View("Login");
+			string provider = "Microsoft";
+			string returnUrl = state;
+			//return View("Login");
+			return new ChallengeResult(provider, Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl }));
 		}
 
 		[AllowAnonymous, HttpPost]
