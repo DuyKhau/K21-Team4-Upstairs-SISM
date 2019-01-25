@@ -63,7 +63,7 @@ namespace K21_Team4_Upstairs_SISM
 			//    ClientId = "",
 			//    ClientSecret = ""
 			//});
-			app.UseVanLangAuthentication("https://localhost:44396/");
+			app.UseVanLangAuthentication("https://cntttest.vanlanguni.edu.vn:18081/Cap21T4/LoginManagement/");
         }
     }
 }

@@ -26,7 +26,7 @@ namespace K21_Team4_Upstairs_SISM.Models
         }
 
         public static ApplicationDbContext Create()
-        {
+      {
             return new ApplicationDbContext();
         }
     }

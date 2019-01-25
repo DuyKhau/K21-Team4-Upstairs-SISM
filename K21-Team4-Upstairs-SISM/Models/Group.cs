@@ -14,12 +14,32 @@ namespace K21_Team4_Upstairs_SISM.Models
     
     public partial class Group
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Group()
+        {
+            this.Group1 = new HashSet<Group>();
+            this.Users = new HashSet<User>();
+            this.Users1 = new HashSet<User>();
+        }
+    
         public int ID { get; set; }
         public string GroupName { get; set; }
-        public string Privacy { get; set; }
-        public string Description { get; set; }
-        public string Session { get; set; }
-        public string Faculty { get; set; }
-        public string Creator { get; set; }
+        public string GroupDescription { get; set; }
+        public Nullable<bool> GroupType { get; set; }
+        public Nullable<int> GroupParent { get; set; }
+        public string CreatedBy { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public string ModifiedBy { get; set; }
+        public Nullable<System.DateTime> ModifiedDate { get; set; }
+        public string DeletedBy { get; set; }
+        public Nullable<System.DateTime> DeletedDate { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Group> Group1 { get; set; }
+        public virtual Group Group2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users1 { get; set; }
     }
 }
